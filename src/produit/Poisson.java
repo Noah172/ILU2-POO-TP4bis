@@ -3,8 +3,8 @@ package produit;
 public class Poisson extends Produit {
 	private String datePeche;
 
-	public Poisson(String datePeche,String unite) {
-		super("poisson", unite);
+	public Poisson(String datePeche) {
+		super("poisson", "gramme");
 		this.datePeche=datePeche;
 
 	}
@@ -12,6 +12,11 @@ public class Poisson extends Produit {
 	@Override
 	public String getDescription() {
 		return  getNom() + " péché " + datePeche + ".";
+	}
+
+	@Override
+	public double calculerPrix(double prix) {	
+		return prix;
 	}
 
 }
