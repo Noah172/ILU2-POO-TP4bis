@@ -6,15 +6,15 @@ public class Sanglier extends Produit {
 	private int poids;
 	private Gaulois chasseur;
 
-	public Sanglier(String nom, String unite,int poids,Gaulois chasseur) {
-		super(nom, unite);
+	public Sanglier(String unite,int poids,Gaulois chasseur) {
+		super("sanglier", unite);
 		this.poids=poids;
 		this.chasseur=chasseur;
 	}
 
 	@Override
 	public String getDescription() {
-		return  getNom() + " de " + poids + unite + " chassé par " + chasseur + ".";
+		return  getNom() + " de " + poids +" " + unite + " chassÃ© par " + chasseur.getNom() + ".";
 	}
 
 }
